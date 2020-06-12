@@ -20,7 +20,7 @@ class Patient
     appointments.map {|appointment| appointment.doctor}
     doctors = []
     appointments.each do |appointment|
-      doctors << appointment.doctors
+      doctors << appointment.doctor
     end
     doctors
   end

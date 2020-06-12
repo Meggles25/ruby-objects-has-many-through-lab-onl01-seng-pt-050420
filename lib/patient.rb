@@ -17,7 +17,7 @@ class Patient
     Appointment.all.select {|appointment| appointment.patient == self}
     
   def doctors
-    appointments = Appointment.all.select {|appointment| appointment.doctor}
+    appointments = Appointment.all.select {|s| s.patient == self}
     doctors = []
     appointments.each do |appointment|
       doctors << appointment.doctor

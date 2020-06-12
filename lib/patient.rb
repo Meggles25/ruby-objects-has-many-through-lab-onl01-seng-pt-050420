@@ -21,12 +21,5 @@ class Patient
     Appointment.all.select {|appointment| appointment.patient == self}
   end  
     
-  def doctors
-    appointments = Appointment.all.select {|s| s.patient == self}
-    doctors = []
-    appointments.each do |appointment|
-      doctors << appointment.doctor
-    end
-    doctors
-  end  
+  
 end
